@@ -1,0 +1,18 @@
+@import './assets/styles/config/_colors.scss';
+html,
+body {
+	height: 100%;
+}
+
+#root {	
+	max-width: 144rem;			
+  margin: 0 auto;
+	padding: 0;
+}
+
+.app {
+	font-family: 'Roboto', sans-serif;
+	margin: 0 auto;
+	color: $color-primary;
+	min-height: 100%;
+}

@@ -1,0 +1,26 @@
+@import '../../assets/styles/config/_mixins.scss';
+
+.contacts {
+
+	@include font-size(1.6, 2.179);	
+
+	&__phone {
+		display: flex;
+		align-items: center;
+		padding-bottom: 2.5rem;
+	}
+
+	&__email {
+		display: flex;
+		align-items: center;
+	}
+
+	&__phone {
+		display: flex;
+		align-items: center;
+	}
+
+	&__img {
+		padding: 0 1rem 0 0;
+	}
+}

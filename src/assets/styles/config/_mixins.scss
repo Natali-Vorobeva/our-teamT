@@ -1,0 +1,93 @@
+@use 'sass:math';
+
+@import './_colors.scss';
+@import './_vars.scss';
+
+// брейкпоинты
+@mixin mq($from, $to: false) {
+	@if $to {
+			@media (min-width: #{$from}px) and (max-width: #{$to}px) {
+					@content;
+			}
+	} @else {
+			@media (max-width: #{$from}px) {
+					@content;
+			}
+	}
+}
+
+// font-size и line-height текста 
+@mixin font-size($font-size, $line-height: normal) {
+  font-size: $font-size * 1rem;
+
+  @if $line-height == normal {
+    line-height: normal;
+  } @else {
+    line-height: math.div($line-height, $font-size);
+  }
+}
+
+// @mixin calc-font($font-start, $font-end, $lh-start, $lh-end) {
+// 	font-size: calc(($font-end + ($font-start - $font-end) * ((100vw - 37.5rem) / (144 - 37.5)) * 1 rem));
+// 		line-height: calc(($lh-end + ($lh-start - $lh-end) * ((100vw - 37.5rem) / (144 - 37.5)) * 1 rem));
+// }
+
+// размер слайдов
+@mixin width-slide-max() {
+	min-width: 33.45%;
+	max-width: 33.45%;
+}
+
+@mixin width-slide-medium() {
+	min-width: calc(50%) 
+}
+
+@mixin width-slide-small() {
+	min-width: 100% 
+}
+
+@mixin width-flex-item() {
+	min-width: calc(50% - 10px) 
+}
+
+//  Заголовок для блоков LECTURE И SESSION
+@mixin title() {
+	font-size: calc(3.6rem + (5.4 - 3.6) * ((100vw - 37.5rem) / (136.6 - 37.5)));
+	line-height: calc(3.96rem + (6.48 - 3.96) * ((100vw - 37.5rem) / (136.6 - 37.5)));
+	font-family: 'Merriweather', serif;
+	text-transform: uppercase;
+}
+
+// Голубой текст
+@mixin blue-text() {
+	font-size: calc(1.8rem + (2 - 1.8) * ((100vw - 37.5rem) / (136.6 - 37.5)));
+	line-height: calc(2.16rem + (2.4 - 2.16) * ((100vw - 37.5rem) / (136.6 - 37.5)));
+	font-family: 'Golos Text', sans-serif;
+	text-transform: initial;
+	color: $color-blue;	
+}
+
+// стили для кнопок навигации
+@mixin button-arrow() {
+	min-width: 3.6rem;
+	height: 3.6rem;
+	background-color: $black-button;
+	border-radius: 50%;
+	outline: none;
+	border: none;
+	transition: all .3s ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $black-button-hover;
+		outline: none;
+		border: none;
+	}
+}
+
+// // стили стрелок на кнопках навигации
+// @mixin arrow() {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }

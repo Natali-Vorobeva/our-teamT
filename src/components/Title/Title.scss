@@ -1,0 +1,19 @@
+@import '../../assets/styles/config/_mixins.scss';
+
+.title {
+	font-size: calc(3.6rem + (6.4 - 3.6) * ((100vw - 37.5rem) / (144 - 37.5)));
+	line-height: calc(4.219rem + (7.5 - 4.219) * ((100vw - 37.5rem) / (144 - 37.5)));
+	text-align: center;
+	padding-top: 3.2rem;
+	padding-bottom: 1.6rem;
+	
+
+	&__subtitle {
+		font-size: calc(1.6rem + (2 - 1.6) * ((100vw - 37.5rem) / (144 - 37.5)));
+		line-height: calc(1.875rem + (2.344 - 1.875) * ((100vw - 37.5rem) / (144 - 37.5)));
+		max-width: 84.6rem;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+	}
+}
