@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
-
 import { useForm } from '../../utils/useForm';
 import { setUser, setResetErrorEmail } from '../../store/auth/authSlice';
 import { authSelectors } from '../../store/auth/authSelectors'
@@ -13,7 +12,6 @@ import './Form.scss';
 function Form() {
 
 	const errorEmail = useSelector(authSelectors.getErrorEmail)
-	const user = useSelector(authSelectors.getUser)
 	const { handleChange, values, errors, isValid, setIsValid } = useForm()
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
@@ -81,7 +79,6 @@ function Form() {
 					minLength={6} maxLength={6}
 				/>
 				<span className="password-input-error form__input-error">{errors.password}</span>
-
 
 				<Input
 					id="confirm_password" type="password"

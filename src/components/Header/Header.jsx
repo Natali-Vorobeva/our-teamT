@@ -8,14 +8,13 @@ import Button from '../Button/Button';
 import './Header.scss';
 
 function Header({ children, handleSignOut, buttonVisible, onClick, width }) {
+
 	const navigate = useNavigate();
-	const isAuth = useSelector(authSelectors.getIsAuth)
 	const dispatch = useDispatch()
 	function handleSignOut() {
 		localStorage.removeItem('our-team');
 		dispatch(setAuth(false))
 		navigate('/signup', { replace: true });
-		// setEmail('');
 	}
 
 	return (

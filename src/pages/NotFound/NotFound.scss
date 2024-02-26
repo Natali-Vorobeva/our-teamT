@@ -15,33 +15,35 @@
 	&__code {
 		color: $color-gray-light;
 		font-weight: 400;
-		font-size: 140px;
-		line-height: 169px;
+		font-size: 14rem;
+		line-height: 16.9rem;
 	}
 
 	&__text {
-		padding: 5px 0 0 0;
+		padding: .5rem 0 0 0;
 		text-align: center;
 		font-weight: 400;
-		font-size: 16px;
-		line-height: 19px;
+		font-size: 1.6rem;
+		line-height: 1.9rem;
 		color: $color-gray-opacity-15;
 	}
 
 	&__link {
 		display: inline;
-		width: 42px;
+		width: 4.2rem;
 		margin: 0 auto;
 		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
+		font-size: 1.4rem;
+		line-height: 1.7rem;
 		color: $color-error;
 		transition: all .1s ease;
-		padding: 0 0 60px 0;
+		padding: 0 0 6rem 0;
+		transition: all .2s ease;
+		cursor: pointer;
 	}
 
 	&__link:hover {
-		transition: all .5s ease;
-		opacity: .7;
+		transition: all .2s ease;		
+		text-decoration: underline;
 	}
 }

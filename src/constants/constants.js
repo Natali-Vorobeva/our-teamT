@@ -1,10 +1,8 @@
-// import artur from '../assets/images/olga.png'
-
 const staff = [
 	{
 		id: 1,
 		position: 'Партнер',
-		avatar: '/images/artur.png',
+		avatar: '/artur.png',
 		email: "artur.fields@reqres.in",
 		first_name: "Артур",
 		last_name: "Королев",
@@ -17,7 +15,7 @@ const staff = [
 	{
 		id: 2,
 		position: 'Партнер',
-		avatar: '/images/olga.png',
+		avatar: '/olga.png',
 		email: "olga.fields@reqres.in",
 		first_name: "Ольга",
 		last_name: "Ильина",
@@ -29,7 +27,7 @@ const staff = [
 	},
 	{
 		id: 3,
-		avatar: '/images/zamir.png',
+		avatar: '/zamir.png',
 		email: "zamir.fields@reqres.in",
 		first_name: "Замир",
 		last_name: "Орлов",
@@ -42,7 +40,7 @@ const staff = [
 	},
 	{
 		id: 4,
-		avatar: '/images/daniil.png',
+		avatar: '/daniil.png',
 		email: "daniil.fields@reqres.in",
 		first_name: "Даниил",
 		last_name: "Новиков",
@@ -55,7 +53,7 @@ const staff = [
 	},
 	{
 		id: 5,
-		avatar: '/images/diana.png',
+		avatar: '/diana.png',
 		email: "diana.fields@reqres.in",
 		first_name: "Дарья",
 		last_name: "Семенова",
@@ -68,7 +66,7 @@ const staff = [
 	},
 	{
 		id: 6,
-		avatar: '/images/zahar.png',
+		avatar: '/zahar.png',
 		email: "zahar.fields@reqres.in",
 		first_name: "Захар",
 		last_name: "Романов",
@@ -81,7 +79,7 @@ const staff = [
 	},
 	{
 		id: 7,
-		avatar: '/images/egor.png',
+		avatar: '/egor.png',
 		email: "egor.fields@reqres.in",
 		first_name: "Егор",
 		last_name: "Волков",
@@ -94,7 +92,7 @@ const staff = [
 	},
 	{
 		id: 8,
-		avatar: '/images/kira.png',
+		avatar: '/kira.png',
 		email: "kira.fields@reqres.in",
 		first_name: "Кира",
 		last_name: "Попова",
@@ -107,7 +105,7 @@ const staff = [
 	},
 	{
 		id: 9,
-		avatar: '/images/diana.png',
+		avatar: '/diana.png',
 		email: "diana2.fields@reqres.in",
 		first_name: "Диана",
 		last_name: "Андреева",
@@ -120,7 +118,7 @@ const staff = [
 	},
 	{
 		id: 10,
-		avatar: '/images/zahar.png',
+		avatar: '/zahar.png',
 		email: "zahar2.fields@reqres.in",
 		first_name: "Захар",
 		last_name: "Романов",
@@ -133,7 +131,7 @@ const staff = [
 	},
 	{
 		id: 11,
-		avatar: '/images/egor.png',
+		avatar: '/egor.png',
 		email: "egor2.fields@reqres.in",
 		first_name: "Егор",
 		last_name: "Волков",
@@ -146,7 +144,7 @@ const staff = [
 	},
 	{
 		id: 12,
-		avatar: '/images/kira.png',
+		avatar: '/kira.png',
 		email: "kira2.fields@reqres.in",
 		first_name: "Кира",
 		last_name: "Попова",

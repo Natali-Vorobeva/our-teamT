@@ -1,4 +1,4 @@
-# [Our-team](https://github.com/Natali-Vorobeva/our-teamT.git)
+# [Our-team](https://natali-vorobeva.github.io/our-teamT/)
 
 * React + vite
 * Адаптивная и резиновая верстка

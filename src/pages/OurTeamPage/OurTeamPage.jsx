@@ -35,7 +35,6 @@ function OurTeamPage({ width }) {
 	const currentStaff = getUsers.slice(firstEmployeeIndex, lastEmployeeIndex)
 	const paginate = pageNumber => setCurrentPage(pageNumber)
 
-
 	/* Фильтр карточек */
 	const items = [4, 8, 16, 'Показать все']
 	function handleClickFilter(item) {

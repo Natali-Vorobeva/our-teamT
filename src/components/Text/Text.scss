@@ -1,8 +1,8 @@
 @import '../../assets/styles/config/_mixins.scss';
 
-.text {
-	max-width: 63.3rem;		
+.text {	
 	@include font-size(1.6, 2.179);	
+	max-width: 63.3rem;	
 
 	@include mq(800) {
 		max-width: 100%;
@@ -12,7 +12,5 @@
 		&:not(:last-child){
 			padding-bottom: 2rem;
 		}
-	}
-
-	
+	}	
 }

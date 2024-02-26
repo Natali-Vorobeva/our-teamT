@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom';
 import './Button.scss';
 
 function Button({ btnText, className, onSignOut, path, onClick }) {

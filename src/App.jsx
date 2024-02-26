@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import staff from './constants/constants'
 import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
-// import { CurrentUserContext } from './contexts/CurrentUserContext'
 import ProtectedRoute from './utils/ProtectedRoute'
 import FormPage from './pages/FormPage/FormPage'
 import OurTeamPage from './pages/OurTeamPage/OurTeamPage'
-import Popup from './components/Popup/Popup';
 import NotFound from './pages/NotFound/NotFound';
 import { setAuth, setUsers } from './store/auth/authSlice';
 import { authSelectors } from './store/auth/authSelectors'
+import staff from './constants/constants'
 
 import './assets/styles/GlobalStyle.scss'
 import './App.scss'
-
-// !TODO GSAP для анимаций
 
 function App() {
 	const isAuth = useSelector(authSelectors.getIsAuth)

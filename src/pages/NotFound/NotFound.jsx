@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './NotFound.scss'
 
@@ -15,7 +15,7 @@ function NotFound() {
         <p className="not-found__code">404</p>
         <p className="not-found__text">Страница не найдена</p>
       </div>
-      <Link className="not-found__link" to="/">Назад</Link>
+      <a className="not-found__link" onClick={handleBackNavigate}>Назад</a>
     </section>
   )
 }

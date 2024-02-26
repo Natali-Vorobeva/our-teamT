@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
 	define: {
     'process.env': {
-			PUBLIC_URL: "https://github.com/Natali-Vorobeva/our-teamT.git" 
+			PUBLIC_URL: "https://natali-vorobeva.github.io/our-teamT/" 
 		}
   }
 })

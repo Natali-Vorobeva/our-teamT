@@ -1,8 +1,7 @@
-import openEye from '../../assets/images/eye.png'
+import { useState } from 'react';import openEye from '../../assets/images/eye.png'
 import closeEye from '../../assets/images/EyeClose.svg'
 
 import './Input.scss';
-import { useState } from 'react';
 
 function Input({ 
 	id, 
