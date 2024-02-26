@@ -1,10 +1,10 @@
-import artur from '../assets/images/olga.png'
+// import artur from '../assets/images/olga.png'
 
 const staff = [
 	{
 		id: 1,
 		position: 'Партнер',
-		avatar: '../../../src/assets/images/artur.png',
+		avatar: '/images/artur.png',
 		email: "artur.fields@reqres.in",
 		first_name: "Артур",
 		last_name: "Королев",
@@ -17,7 +17,7 @@ const staff = [
 	{
 		id: 2,
 		position: 'Партнер',
-		avatar: '../../../src/assets/images/olga.png',
+		avatar: '/images/olga.png',
 		email: "olga.fields@reqres.in",
 		first_name: "Ольга",
 		last_name: "Ильина",
@@ -29,7 +29,7 @@ const staff = [
 	},
 	{
 		id: 3,
-		avatar: '../../../src/assets/images/zamir.png',
+		avatar: '/images/zamir.png',
 		email: "zamir.fields@reqres.in",
 		first_name: "Замир",
 		last_name: "Орлов",
@@ -42,7 +42,7 @@ const staff = [
 	},
 	{
 		id: 4,
-		avatar: '../../../src/assets/images/daniil.png',
+		avatar: '/images/daniil.png',
 		email: "daniil.fields@reqres.in",
 		first_name: "Даниил",
 		last_name: "Новиков",
@@ -55,7 +55,7 @@ const staff = [
 	},
 	{
 		id: 5,
-		avatar: '../../../src/assets/images/diana.png',
+		avatar: '/images/diana.png',
 		email: "diana.fields@reqres.in",
 		first_name: "Дарья",
 		last_name: "Семенова",
@@ -68,7 +68,7 @@ const staff = [
 	},
 	{
 		id: 6,
-		avatar: '../../../src/assets/images/zahar.png',
+		avatar: '/images/zahar.png',
 		email: "zahar.fields@reqres.in",
 		first_name: "Захар",
 		last_name: "Романов",
@@ -81,7 +81,7 @@ const staff = [
 	},
 	{
 		id: 7,
-		avatar: '../../../src/assets/images/egor.png',
+		avatar: '/images/egor.png',
 		email: "egor.fields@reqres.in",
 		first_name: "Егор",
 		last_name: "Волков",
@@ -94,7 +94,7 @@ const staff = [
 	},
 	{
 		id: 8,
-		avatar: '../../../src/assets/images/kira.png',
+		avatar: '/images/kira.png',
 		email: "kira.fields@reqres.in",
 		first_name: "Кира",
 		last_name: "Попова",
@@ -107,7 +107,7 @@ const staff = [
 	},
 	{
 		id: 9,
-		avatar: '../../../src/assets/images/diana.png',
+		avatar: '/images/diana.png',
 		email: "diana2.fields@reqres.in",
 		first_name: "Диана",
 		last_name: "Андреева",
@@ -120,7 +120,7 @@ const staff = [
 	},
 	{
 		id: 10,
-		avatar: '../../../src/assets/images/zahar.png',
+		avatar: '/images/zahar.png',
 		email: "zahar2.fields@reqres.in",
 		first_name: "Захар",
 		last_name: "Романов",
@@ -133,7 +133,7 @@ const staff = [
 	},
 	{
 		id: 11,
-		avatar: '../../../src/assets/images/egor.png',
+		avatar: '/images/egor.png',
 		email: "egor2.fields@reqres.in",
 		first_name: "Егор",
 		last_name: "Волков",
@@ -146,7 +146,7 @@ const staff = [
 	},
 	{
 		id: 12,
-		avatar: '../../../src/assets/images/kira.png',
+		avatar: '/images/kira.png',
 		email: "kira2.fields@reqres.in",
 		first_name: "Кира",
 		last_name: "Попова",

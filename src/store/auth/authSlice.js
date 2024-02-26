@@ -22,7 +22,6 @@ export const authSlice = createSlice({
 				const newUser = {
 					// ...el,
 					id: state.users.length + 1,
-
 					email: state.user.email,
 					first_name: state.user.username,
 					last_name: '',

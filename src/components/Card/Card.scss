@@ -18,12 +18,18 @@
 		border: 1px solid $color-black;
 	}
 
-	&__image {
+	&__img {
 		width: 12.4rem;
-		height: 12.4rem;
-		border-radius: 50%;
+		height: 12.4rem;		
 		margin: 0 7rem;
+	}
+
+	&__image {
+		width: 100%;
+		aspect-ratio: 1;
+		border-radius: 50%;
 		object-fit: cover;
+		border: 1px solid #ff0000;
 	}
 
 	&__name {
