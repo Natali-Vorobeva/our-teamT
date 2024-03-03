@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import Card from '../../components/Card/Card';
-import Gallery from '../../components/Gallery/Gallery';
-import Title from '../../components/Title/Title';
-import Popup from '../../components/Popup/Popup';
-import Pagination from '../../components/Pagination/Pagination';
-import Filter from '../../components/Filter/Filter';
+import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import Card from '../../components/Card/Card'
+import Gallery from '../../components/Gallery/Gallery'
+import Title from '../../components/Title/Title'
+import Popup from '../../components/Popup/Popup'
+import Pagination from '../../components/Pagination/Pagination'
+import Filter from '../../components/Filter/Filter'
 import { authSelectors } from '../../store/auth/authSelectors'
+
 import './OurTeamPage.scss';
 
 function OurTeamPage({ width }) {
@@ -40,7 +41,7 @@ function OurTeamPage({ width }) {
 	function handleClickFilter(item) {
 		setStaffPerPage(item == 'Показать все' ? getUsers.length : item)
 	}
-	
+
 	function popupClose() {
 		setPopup(true)
 	}
@@ -88,7 +89,6 @@ function OurTeamPage({ width }) {
 												lastName={item.last_name}
 												{...item} />
 										)
-
 									})
 								}
 							</Gallery >

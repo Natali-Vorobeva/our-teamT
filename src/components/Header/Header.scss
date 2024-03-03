@@ -14,21 +14,27 @@
 		gap: 2.8rem;
 		justify-content: space-between;
 
-		@include mq(700) {
-			padding: 1.2rem 1.6rem 6.4rem 1.6rem;
-			gap: .2rem;
+		@include mq(900) {
+			gap: 0;
+			padding: 1.2rem 1.6rem 6.4rem;
 		}
 	}
 
 	&__content {
-		width: 100%;
+		min-width: calc(100% - 18.7rem - 3.2rem);
+
+		@include mq(900) {
+			min-width: calc(100% - 18.7rem);
+		}
 	}
 
 	&__back {
 		visibility: hidden;
+
+		&.visible {
+			visibility: visible;
+		}
 	}
 }
 
-.visible {
-	visibility: visible;
-}
+

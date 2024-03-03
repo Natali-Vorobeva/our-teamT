@@ -1,0 +1,13 @@
+@import '../../assets/styles/config/_mixins.scss';
+
+.no-information {
+	width: 61%;
+	height: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include mq(700) {
+		width: 100%;
+	}
+}

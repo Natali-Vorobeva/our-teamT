@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Route, Routes, useNavigate, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './utils/ProtectedRoute'
 import FormPage from './pages/FormPage/FormPage'
 import OurTeamPage from './pages/OurTeamPage/OurTeamPage'
 import NotFound from './pages/NotFound/NotFound';
-import { setAuth, setUsers } from './store/auth/authSlice';
+import { setAuthTrue, setAuthFalse } from './store/auth/authSlice';
 import { authSelectors } from './store/auth/authSelectors'
-import staff from './constants/constants'
 
 import './assets/styles/GlobalStyle.scss'
 import './App.scss'
 
 function App() {
 	const isAuth = useSelector(authSelectors.getIsAuth)
-	const [width, setWidth] = useState(window.innerWidth);
+	const [width, setWidth] = useState(window.innerWidth)
 	const dispatch = useDispatch()
 
 	useEffect(() => {
@@ -30,15 +29,12 @@ function App() {
 	useEffect(() => {
 		let dataLocal = localStorage.getItem('our-team');
 		if (dataLocal !== null || '') {
-			dispatch(setAuth(true))
-		} else {
-			dispatch(setAuth(false))
+			dispatch(setAuthTrue())
+		}
+		else {
+			dispatch(setAuthFalse())
 		}
 	}, []);
-
-	useEffect(() => {
-		dispatch(setUsers(staff))
-	}, [])
 
 	return (
 		<div className="app">
@@ -52,7 +48,7 @@ function App() {
 						/>
 					}
 				/>
-				<Route exact isAuth={isAuth} path='/signup' element={<FormPage />} />
+				<Route exact path='/signup' element={<FormPage />} />
 				<Route path='/*' element={<NotFound />} />
 			</Routes>
 		</div>

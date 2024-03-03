@@ -1,18 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { initialState } from './initialState'
 import useToken from '../../utils/useToken'
+import staff from '../../constants/constants'
 
 export const authSlice = createSlice({
 	name: 'auth',
 	initialState,
 	reducers: {
-		setAuth: (state, action) => {
-			state.isAuth = action.payload
+		setAuthTrue: (state, action) => {
+			state.isAuth = true
+			state.users = JSON.parse(localStorage.getItem('staff'))
 		},
-		setUsers: (state, action) => {
-			state.users = action.payload
+		setAuthFalse: (state, action) => {
+			state.isAuth = false
+			state.users = []
 		},
 		setUser: (state, action) => {
+			state.users = staff
 			state.user = action.payload
 			const emailUser = state.users.find(user => {
 				return user.email == state.user.email
@@ -20,7 +24,6 @@ export const authSlice = createSlice({
 
 			if (emailUser === undefined) {
 				const newUser = {
-					// ...el,
 					id: state.users.length + 1,
 					email: state.user.email,
 					first_name: state.user.username,
@@ -30,8 +33,11 @@ export const authSlice = createSlice({
 					morePartOne: '',
 					morePartTwo: '',
 					morePartThree: '',
+					liked: false,
+					tel: "Номер телефона не указан",
 				}
 				state.users.unshift(newUser)
+				localStorage.setItem('staff', JSON.stringify(state.users))
 				useToken()
 				state.isAuth = true
 			} else {
@@ -40,15 +46,17 @@ export const authSlice = createSlice({
 		},
 		setLike: (state, action) => {
 			const id = action.payload
-			const obj = state.users.find(f=>f.id == id)
-			if(obj) obj.liked = !obj.liked
-		},		
+			state.users = JSON.parse(localStorage.getItem('staff'))
+			const obj = state.users.find(f => f.id == id)
+			if (obj) obj.liked = !obj.liked
+			localStorage.setItem('staff', JSON.stringify(state.users))
+		},
 		setResetErrorEmail: (state, action) => {
 			state.errorEmail = ''
 		},
 	},
 })
 
-export const { setAuth, setUser, setUsers, setResetErrorEmail, setLike } = authSlice.actions
+export const { setAuthTrue, setAuthFalse, setUser, setUsers, setResetErrorEmail, setLike } = authSlice.actions
 
 export default authSlice.reducer

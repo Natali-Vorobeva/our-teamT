@@ -18,17 +18,17 @@ function Form() {
 
 	useEffect(() => {
 		if (errorEmail !== '') {
-			values.email = ''			
+			values.email = ''
 		}
 	}, [errorEmail])
 
 	useEffect(() => {
 		if (values.email !== '') {
-			dispatch(setResetErrorEmail())			
+			dispatch(setResetErrorEmail())
 		}
 	}, [values.email])
 
-	
+
 	useEffect(() => {
 		if (values.password !== values.confirm_password) {
 			setIsValid(false);
@@ -37,6 +37,12 @@ function Form() {
 
 	function handleSubmit(evt) {
 		evt.preventDefault();
+		if (errorEmail !== '') {				
+				values.username = '',
+				values.email = '',
+				values.password = '',
+				values.confirm_password = ''
+		}
 		dispatch(setUser({
 			username: values.username,
 			email: values.email,
