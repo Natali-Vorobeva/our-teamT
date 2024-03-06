@@ -36,7 +36,7 @@ export const authSlice = createSlice({
 					liked: false,
 					tel: "Номер телефона не указан",
 				}
-				state.users.unshift(newUser)
+				state.users.push(newUser)
 				localStorage.setItem('staff', JSON.stringify(state.users))
 				useToken()
 				state.isAuth = true

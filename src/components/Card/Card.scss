@@ -1,13 +1,13 @@
 @import '../../assets/styles/config/_colors.scss';
 @import '../../assets/styles/config/_mixins.scss';
 
-.card {
+.card {	
+	@include padd(3.6rem 2rem 2rem);
 	display: grid;
 	row-gap: 2rem;
 	grid-template: 12.4rem 2.3rem 2rem / 1fr;
 	justify-self: center;
 	transition: all .5s ease;
-	padding: 3.6rem 2rem 2rem;
 	box-shadow: 0 0.9960451126px 3.9841804504px 0px $color-gray-opacity-15;
 	border-radius: 1rem;
 	border: 1px solid $color-gray-opacity-15;
@@ -33,17 +33,18 @@
 	}
 
 	&__name {
-		font-size: 2rem;
-		line-height: 1.172;
-		color: $color-primary;
+		@include font(2, 1.172, $color-primary);
+		@include padd(1rem 0 0 0);
+		height: 4rem;
 		text-align: center;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
 
-	&__favorite {
-		display: flex;
-		justify-content: end;
+	&__favorite {		
+		@include flex {
+			justify-content: end;
+		}
 	}
 }

@@ -1,22 +1,24 @@
-@import '../../assets/styles/config/_colors.scss';
+@import '../../assets/styles/config/_mixins.scss';
 
 .filter {
-	margin-top: 2rem;
-	margin-right: .5rem;
-	display: flex;
-	align-items: center;
+	@include padd(0 0 0 .3rem) {
+		margin-top: 2rem;
+		margin-right: .5rem;
+	};
+	@include flex {
+		align-items: center;
+	}
 	height: 2rem;
 	font-size: 1.3rem;	
 	box-shadow: 0 0.9960451126px 3.9841804504px 0px $color-gray-opacity-15,
 	0 1.9841804504px 0px $color-violet;
-	padding: 0 0 0 .3rem;
 	border-radius: .2rem;
 
 	&__items {
-		display: flex;
+		@include flex;
+		margin-left: .3rem;
 		list-style: none;
-		cursor: pointer;
-		margin-left: .3rem;	
+		cursor: pointer;	
 		
 		&:hover {
 			color: $color-white;
@@ -25,13 +27,14 @@
 	}
 
 	&__item {
-		transition: all .3s ease;
-		margin-left: 1rem;			
-		padding: .4rem;
+		@include padd(.4rem) {
+			margin-left: 1rem;
+		};
+		transition: all .3s ease;			
 		font-size: 1.3rem;
+		
 		&:hover {
-			
-		text-decoration: underline;
+			text-decoration: underline;
 		}
 	}	
 }

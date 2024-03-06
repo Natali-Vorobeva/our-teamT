@@ -1,11 +1,14 @@
 @import '../../assets/styles/config/_mixins.scss';
 
 .no-information {
+	@include font(1.6, 2.179);
+	@include flex {
+		justify-content: center;
+		align-items: center;
+	};
 	width: 61%;
 	height: 20rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	box-shadow: 0 0.9960451126px 3.9841804504px 0px $color-gray-opacity-15;
 
 	@include mq(700) {
 		width: 100%;

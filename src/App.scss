@@ -1,4 +1,6 @@
 @import './assets/styles/config/_colors.scss';
+@import './assets/styles/config/_mixins.scss';
+
 html,
 body {
 	height: 100%;
@@ -7,7 +9,7 @@ body {
 #root {	
 	max-width: 144rem;			
   margin: 0 auto;
-	padding: 0;
+	@include padd(0);
 }
 
 .app {

@@ -1,7 +1,5 @@
 @use 'sass:math';
-
 @import './_colors.scss';
-@import './_vars.scss';
 
 // брейкпоинты
 @mixin mq($from, $to: false) {
@@ -17,9 +15,10 @@
 }
 
 // font-size и line-height текста 
-@mixin font-size($font-size, $line-height: normal) {
+@mixin font($font-size, $line-height: normal, $color: inherit, $fontW: 400, ) {
   font-size: $font-size * 1rem;
-
+	font-weight: $fontW;
+	color: $color;
   @if $line-height == normal {
     line-height: normal;
   } @else {
@@ -27,10 +26,17 @@
   }
 }
 
-// @mixin calc-font($font-start, $font-end, $lh-start, $lh-end) {
-// 	font-size: calc(($font-end + ($font-start - $font-end) * ((100vw - 37.5rem) / (144 - 37.5)) * 1 rem));
-// 		line-height: calc(($lh-end + ($lh-start - $lh-end) * ((100vw - 37.5rem) / (144 - 37.5)) * 1 rem));
-// }
+@mixin padd($padd...) {
+	padding: $padd;
+	@content;
+}
+
+@mixin flex($gap: 0, $direction: row, ) {
+	display: flex;
+	flex-direction: $direction;
+	gap: #{$gap}rem;
+	@content;
+}
 
 // размер слайдов
 @mixin width-slide-max() {
@@ -84,10 +90,3 @@
 		border: none;
 	}
 }
-
-// // стили стрелок на кнопках навигации
-// @mixin arrow() {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }

@@ -1,4 +1,6 @@
+@import '../../assets/styles/config/_mixins.scss';
+
 .form-page {
-	display: flex;
+	@include flex;	
 	margin: auto;
 }

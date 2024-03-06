@@ -1,22 +1,20 @@
 @import '../../assets/styles/config/_mixins.scss';
 
 .employee {
-	display: flex;
-	gap: 3.2rem;
+	@include flex(3.2);
 	min-width: 100%;
 
 	@include mq(700) {
-		padding-top: 5.2rem;
-		flex-direction: column-reverse;
-		gap: 0;
+		@include padd(5.2rem 0 0 0);
+		@include flex($direction: column-reverse);
 	}
 
 	&__info {
 		max-width: calc(100% - 18.7rem - 3.2rem);
-		display: flex;
-		flex-direction: column;
-		align-self: center;
-		
+		@include flex($direction: column) {
+			align-self: center;
+		}
+				
 		@include mq(700) {
 			min-width: 100%;
 		}
@@ -47,9 +45,9 @@
 		line-height: calc(4.219rem + (7.5 - 4.219) * ((100vw - 37.5rem) / (144 - 37.5)));
 		
 		@include mq(700) {
+			@include padd(0 0 1.6rem 0);
 			width: 100%;
-			text-align: center;
-			padding-bottom: 1.6rem;
+			text-align: center;	
 		}
 
 		&.font-size {
@@ -63,8 +61,8 @@
 		line-height: calc(2.344rem + (3.75 - 2.344) * ((100vw - 37.5rem) / (144 - 37.5)));
 
 		@include mq(700) {
+			@include padd(0 0 1.6rem 0);
 			text-align: center;
-			padding-bottom: 1.6rem;
 		} 
 		
 		&.font-size-position {

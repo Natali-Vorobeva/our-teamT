@@ -8,11 +8,11 @@
 	border-radius: 1.6rem;
 
 	&__body {
-		padding: 1.6rem;
+		@include padd(1.6rem);
 	}
 
 	&__title {
-		@include font-size(2, 2.344)
+		@include font(2, 2.344);
 	}
 
 	&__input-error {

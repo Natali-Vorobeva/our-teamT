@@ -1,13 +1,11 @@
 @import '../../assets/styles/config/_mixins.scss';
 
 .pagination {	
+	@include flex(.1rem);
 		list-style: none;
-		display: flex;
 		height: 20px;
 		margin-top: 2rem;
 		height: 3rem;		
-		display: flex;
-		gap: .1rem;
 		
 		&__page-item {
 			max-height: 100%;
@@ -15,12 +13,13 @@
 		}
 
 		&__page-item-link {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			@include padd(.5rem);
+			@include flex(.1rem) {
+				justify-content: center;
+				align-items: center;
+			};
 			width: 3rem;
 			height: 100%;
-			padding: .5rem;
 			text-decoration: none;
 			color: $color-violet;
 			transition: all .3s ease;

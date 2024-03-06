@@ -1,16 +1,17 @@
 @import '../../assets/styles/config/_mixins.scss';
 
 .input {
+	@include padd(1.6rem 0 0 0);
 	position: relative;
-	padding-top: 1.6rem;
 
-	&__label {
-		@include font-size(1.6, 2.179);		
+	&__label {	
+		@include font(1.6, 2.179);
 		display: block;
 		margin: 0 0 .8rem 0;
 	}
 
 	&__input {
+		@include padd(1.6rem 3.2rem 1.6rem 1.6rem);
 		border-radius: .8rem;
 		width: 100%;
 		border-left-color: $color-white;
@@ -20,11 +21,9 @@
 		background-color: $color-gray-light;
 		height: 4.8rem;
 		outline-color: $color-gray-light !important;
-		padding: 1.6rem 3.2rem 1.6rem 1.6rem ;	
 
 		&::placeholder {
-			@include font-size(1.4, 1.641);
-			color: $color-gray;
+			@include font(1.4, 1.641, $color-gray);
 		}
 	}
 

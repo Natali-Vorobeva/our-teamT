@@ -1,7 +1,7 @@
 @import '../../assets/styles/config/_mixins.scss';
 
 .text {	
-	@include font-size(1.6, 2.179);	
+	@include font(1.6, 2.179, $color-black);
 	max-width: 63.3rem;	
 
 	@include mq(800) {
@@ -10,7 +10,7 @@
 
 	&__part {
 		&:not(:last-child){
-			padding-bottom: 2rem;
+			@include padd(0 0 2rem 0);	
 		}
 	}	
 }

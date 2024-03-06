@@ -3,17 +3,16 @@
 .popup {	
 	
 	&__content {
-		display: flex;		
-		gap: 12.9rem;
-		padding: 4.9rem 18.8rem;
-		
+		@include padd(4.9rem 18.8rem);
+		@include flex(12.9rem);	
 
-		@include mq(800) {	
-			padding: 1.2rem 1.6rem;	
+		@include mq(800) {
+			@include padd(1.2rem 1.6rem);	
 		}
 		@include mq(1000) {
-			flex-wrap: wrap-reverse;		
-			gap: 3.2rem;
+			@include flex(3.2rem) {
+				flex-wrap: wrap-reverse;
+			};
 		}
 	}
 }

@@ -32,7 +32,7 @@ function Employee({
 					<img className="employee__img" src={srcImg ? avatar : `https://raw.githubusercontent.com/Natali-Vorobeva/our-teamT/main/public/images${avatar}`} alt="Аватар" />
 				</div>
 				<div className="employee__info">
-					<div className={`employee__name ${styleName}`}>{firstNameEmployee} {lastNameEmployee}</div>
+					<p className={`employee__name ${styleName}`}>{firstNameEmployee} {lastNameEmployee}</p>
 					<p className={`employee__position ${stylePOsition}`}>{position}</p>
 				</div>
 			</section>

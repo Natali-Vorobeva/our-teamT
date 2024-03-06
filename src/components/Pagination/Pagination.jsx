@@ -3,7 +3,6 @@ import './Pagination.scss';
 function Pagination({ staffPerPage, totalStaff, paginate }) {
 	
 	const pageNumbers = []
-
 	for (let i = 1; i <= Math.ceil(totalStaff / staffPerPage); i++) {
 		pageNumbers.push(i)
 	}

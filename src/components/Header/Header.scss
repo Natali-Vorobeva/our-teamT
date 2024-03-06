@@ -8,15 +8,15 @@
 	color: $color-white;
 	
 	&__container {
-		padding: 3.2rem 8rem;
+		@include padd(3.2rem 8rem);
+		@include flex(2.8rem) {
+			justify-content: space-between;
+		};
 		height: 100%;
-		display: flex;
-		gap: 2.8rem;
-		justify-content: space-between;
 
 		@include mq(900) {
-			gap: 0;
-			padding: 1.2rem 1.6rem 6.4rem;
+			@include flex(0);
+			@include padd(1.2rem 1.6rem 6.4rem);
 		}
 	}
 

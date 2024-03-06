@@ -11,6 +11,7 @@ import { authSelectors } from '../../store/auth/authSelectors'
 import './OurTeamPage.scss';
 
 function OurTeamPage({ width }) {
+
 	const getUsers = useSelector(authSelectors.getUsers)
 	const [firstNameEmployee, setFirstNameEmployee] = useState('')
 	const [lastNameEmployee, setLastNameEmployee] = useState('')
@@ -31,15 +32,17 @@ function OurTeamPage({ width }) {
 	/* Пагинация */
 	const [currentPage, setCurrentPage] = useState(1)
 	const [staffPerPage, setStaffPerPage] = useState(16)
-	const lastEmployeeIndex = currentPage * staffPerPage
-	const firstEmployeeIndex = lastEmployeeIndex - staffPerPage
+	let lastEmployeeIndex = currentPage * staffPerPage
+	let firstEmployeeIndex = lastEmployeeIndex - staffPerPage
 	const currentStaff = getUsers.slice(firstEmployeeIndex, lastEmployeeIndex)
 	const paginate = pageNumber => setCurrentPage(pageNumber)
+
 
 	/* Фильтр карточек */
 	const items = [4, 8, 16, 'Показать все']
 	function handleClickFilter(item) {
 		setStaffPerPage(item == 'Показать все' ? getUsers.length : item)
+		setCurrentPage(1)
 	}
 
 	function popupClose() {
@@ -61,6 +64,7 @@ function OurTeamPage({ width }) {
 		setButtonVisible("visible")
 		setPopup(false)
 	}
+
 	return (
 		<div className="our-team">
 			{
@@ -71,13 +75,8 @@ function OurTeamPage({ width }) {
 								width={width} title="Наша команда" subtitle="Это опытные специалисты, хорошо разбирающиеся во всех задачах, которые ложатся на их плечи, и умеющие находить выход из любых, даже самых сложных ситуаций." />
 						</div>
 						<div className="our-team__gallery">
-							<Gallery
-								onClick={handleClickFilter}
-								items={items}
-								getUsers={getUsers}
-								staffPerPage={staffPerPage}
-								totalStaff={getUsers.length}
-								paginate={paginate}>
+
+							<Gallery>
 								{
 									currentStaff.map((item) => {
 										return (

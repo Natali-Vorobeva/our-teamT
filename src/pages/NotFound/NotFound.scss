@@ -1,11 +1,11 @@
 @import '../../assets/styles/config/_mixins.scss';
 
 .not-found {
+	@include flex($direction: column) {
+		justify-content: space-between;
+	};	
   max-width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  height: 100vh;  
 	background-color: $color-violet;
 
 	&__error {
@@ -13,31 +13,22 @@
 	}
 
 	&__code {
-		color: $color-gray-light;
-		font-weight: 400;
-		font-size: 14rem;
-		line-height: 16.9rem;
+		@include font(14, 16.9, $color-gray-light);
 	}
 
 	&__text {
-		padding: .5rem 0 0 0;
+		@include font(1.6, 1.9, $color-gray-opacity-15);
+		@include padd(.5rem 0 0 0);	
 		text-align: center;
-		font-weight: 400;
-		font-size: 1.6rem;
-		line-height: 1.9rem;
-		color: $color-gray-opacity-15;
 	}
 
 	&__link {
+		@include font(1.4, 1.7, $color-error);
+		@include padd(0 0 6rem 0) {
+			margin: 0 auto;
+		};	
 		display: inline;
 		width: 4.2rem;
-		margin: 0 auto;
-		font-weight: 400;
-		font-size: 1.4rem;
-		line-height: 1.7rem;
-		color: $color-error;
-		transition: all .1s ease;
-		padding: 0 0 6rem 0;
 		transition: all .2s ease;
 		cursor: pointer;
 	}
